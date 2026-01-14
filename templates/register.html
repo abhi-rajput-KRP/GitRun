@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitRun | Register</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+        color: #c9d1d9;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 450px;
+        width: 100%;
+      }
+
+      .auth-box {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      }
+
+      .logo {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .logo h1 {
+        font-size: 2rem;
+        background: linear-gradient(135deg, #58a6ff 0%, #bc8cff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 8px;
+      }
+
+      .logo p {
+        color: #8b949e;
+        font-size: 0.95rem;
+      }
+
+      .page-title {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #c9d1d9;
+        margin-bottom: 30px;
+        font-weight: 600;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #c9d1d9;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 16px;
+        background: #0d1117;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        color: #c9d1d9;
+        font-size: 1rem;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #58a6ff;
+        box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+      }
+
+      input::placeholder {
+        color: #6e7681;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #58a6ff 0%, #bc8cff 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(88, 166, 255, 0.4);
+      }
+
+      .btn:active {
+        transform: translateY(0);
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .checkbox-group input[type="checkbox"] {
+        width: auto;
+        accent-color: #58a6ff;
+        cursor: pointer;
+      }
+
+      .checkbox-group label {
+        margin: 0;
+        font-size: 0.85rem;
+        color: #8b949e;
+        cursor: pointer;
+      }
+
+      .toggle-form {
+        text-align: center;
+        margin-top: 25px;
+        color: #8b949e;
+        font-size: 0.9rem;
+      }
+
+      .toggle-form a {
+        color: #58a6ff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .toggle-form a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 480px) {
+        .auth-box {
+          padding: 30px 20px;
+        }
+
+        .logo h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="auth-box">
+        <div class="logo">
+          <h1>🏆 GitRun</h1>
+          <p>Track your development journey</p>
+        </div>
+
+        <h2 class="page-title">Create Account</h2>
+
+        <form onsubmit="handleRegister(event)">
+          <div class="form-group">
+            <label for="registerUsername">GitHub Username</label>
+            <input
+              type="text"
+              id="registerUsername"
+              placeholder="abhi-rajput-KRP"
+              name = "user"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="registerEmail">Email</label>
+            <input
+              type="email"
+              id="registerEmail"
+              placeholder="you@example.com"
+              name="mail"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="Create a strong password"
+              name = "password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Create Account</button>
+        </form>
+
+        <div class="toggle-form">
+          Already have an account? <a href="/">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
